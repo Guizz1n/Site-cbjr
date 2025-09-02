@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+:root {
+    --amarelo-cbjr: #FFC107;
+    --cinza-escuro: #121212;
+    --cinza-medio: #2c2c2c;
+    --cinza-claro: #3a3a3a; /* um pouco mais claro para contraste */
+    --branco-suave: #fdfdfd;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cinza-escuro);
+    color: var(--branco-suave);
+    line-height: 1.6;
+    transition: font-size 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+header {
+    background-color: var(--cinza-escuro);
+}
+
+/* ============= TEXTO MAIS LEGÍVEL ============= */
+h1, h2, h3, h4, h5, h6, p, a, label {
+    color: var(--branco-suave);
+    text-shadow: 1px 1px 2px #000; /* ajuda na leitura sobre imagens */
+}
+
+.nav-link {
+    color: var(--amarelo-cbjr);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+.nav-link:hover,
+.nav-link:focus {
+    color: #fff176;
+    text-decoration: underline;
+}
+
+/* ============= INÍCIO (hero) ============= */
+.inicio-fundo {
+    background-image: url('img/cbjr-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    width: 100%;
+    min-height: 500px;
+    padding: 3rem;
+    position: relative;
+    box-shadow: 0 0 25px var(--amarelo-cbjr);
+}
+
+.img-inicio {
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,193,7,0.8);
+    filter: brightness(1.1) contrast(1.05); /* mais nítida */
+}
+
+/* ============= LOGO (fundo invisível) ============= */
+.nav-img {
+    background: transparent !important;
+    mix-blend-mode: multiply; /* se o png tiver fundo branco */
+    image-rendering: crisp-edges; /* mantém qualidade */
+}
+
+/* ============= GALERIA DE FOTOS ============= */
+#galeria {
+    background-color: var(--cinza-medio);
+    padding: 2rem 0;
+    border-radius: 20px;
+}
+
+#galeria img {
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: brightness(1.05) contrast(1.1) saturate(1.1);
+}
+#galeria img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.15) contrast(1.2) saturate(1.2);
+}
+
+/* ============= FORMULÁRIO ============= */
+.formulario {
+    background-color: var(--cinza-medio);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 15px var(--amarelo-cbjr);
+    font-weight: 600;
+}
+.formulario button {
+    background-color: var(--amarelo-cbjr);
+    border: none;
+    font-weight: 700;
+    color: var(--cinza-escuro);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.formulario button:hover,
+.formulario button:focus {
+    background-color: #ffca28;
+}
+.form-control {
+    background-color: var(--cinza-claro);
+    border: none;
+    color: var(--branco-suave);
+    font-weight: 600;
+}
+.form-control::placeholder {
+    color: #ccc;
+}
+
+/* ============= ACESSIBILIDADE ============= */
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+#botao-acessibilidade {
+    transition: transform 0.3s ease;
+    background-color: var(--amarelo-cbjr);
+    border: none;
+    color: var(--cinza-escuro);
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+    background-color: var(--amarelo-cbjr);
+    border: none;
+    color: var(--cinza-escuro);
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.opcoes-acessibilidade button:hover,
+.opcoes-acessibilidade button:focus {
+    background-color: #ffca28;
+}
+.oculta-lista {
+    display: none;
+}
+
+/* ============= RESPONSIVIDADE ============= */
+@media (max-width: 768px) {
+    .inicio-fundo {
+        flex-direction: column;
+        min-height: auto;
+        padding: 2rem;
+    }
+    .img-inicio {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    #tropicalia .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    #tropicalia .container > div {
+        margin-bottom: 2rem;
+    }
+    h2 {
+        font-size: 2rem; /* títulos menores no mobile */
+    }
+}

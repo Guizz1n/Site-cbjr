@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Charlie Brown Jr. — Tributo</title>
+  <meta name="description" content="Tributo ao Charlie Brown Jr. — galeria, história e contato.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <div class="logo-wrap">
+          <!-- Coloque aqui img/logo.png com fundo transparente -->
+          <img id="logo" src="img/logo.png" alt="Logo Charlie Brown Jr.">
+        </div>
+        <span class="brand-text">Charlie Brown Jr.</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <a href="#inicio" class="link">Início</a>
+        <a href="#sobre" class="link">Quem foi</a>
+        <a href="#galeria" class="link">Galeria</a>
+        <a href="#contato" class="link">Contato</a>
+      </nav>
+
+      <div class="controls" aria-hidden="false">
+        <button id="blendToggle" class="control-btn" title="Alterna modo da logo">Logo: blend</button>
+        <button id="fontUp" class="control-btn" title="Aumentar fonte">A+</button>
+        <button id="fontDown" class="control-btn" title="Diminuir fonte">A-</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <span class="badge">Rock • Santos • 1992</span>
+        <h1 class="hero-title">Bem-vindo ao <strong>universo</strong> do Charlie Brown Jr.</h1>
+        <p class="hero-lead">Atitude, skate e poesia urbana — um tributo visual e responsivo.</p>
+        <div class="hero-actions">
+          <a href="#galeria" class="btn primary">Ver galeria</a>
+          <a href="#sobre" class="btn ghost">Conhecer a história</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <!-- substitua por img/hero.jpg -->
+        <img src="img/foto_2_-_color_-_tamo_ai_na_atividade_-_celebracao_ao_charlie_brown_jr.jpg" alt="Show ao vivo" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section about">
+    <div class="container about-grid">
+      <img class="avatar" src="img/chorão.png" alt="Chorão cantando" loading="lazy">
+      <div>
+        <h2>Quem foi Charlie Brown Jr.?</h2>
+        <p>Formada em Santos (1992), Charlie Brown Jr. misturou rock, rap, reggae e skate punk. Suas letras marcaram gerações e a energia do palco é atemporal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria" class="section gallery-section">
+    <div class="container">
+      <h2>Galeria</h2>
+      <div class="masonry">
+        <figure class="tile tall"><img src="img/live_cbjr_-_divulgacao.jpeg" alt="Guitarrista e baterista
+            " data-full="img/show1.jpg" loading="lazy"><figcaption>Guitarra</figcaption></figure>
+        <figure class="tile"><img src="img/show2.jpg" alt="Bateria com iluminação" data-full="img/show2.jpg" loading="lazy"><figcaption>Bateria</figcaption></figure>
+        <figure class="tile"><img src="img/banda2.png" alt="Chorão no palco" data-full="img/chorau2.jpg" loading="lazy"><figcaption>Chorão</figcaption></figure>
+        <figure class="tile tall"><img src="img/mix.jpg" alt="Mesa de som" data-full="img/mix.jpg" loading="lazy"><figcaption>Mesa de som</figcaption></figure>
+        <figure class="tile"><img src="img/show.png" alt="Público" data-full="img/audience.jpg" loading="lazy"><figcaption>Público</figcaption></figure>
+        <figure class="tile"><img src="img/grafite.jpg" alt="Grafite urbano" data-full="img/grafite.jpg" loading="lazy"><figcaption>Grafite</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de imagem">
+    <button id="lbClose" class="lb-close" aria-label="Fechar">✕</button>
+    <img id="lbImg" alt="Imagem ampliada">
+  </div>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section contact">
+    <div class="container">
+      <h2>Contato</h2>
+      <form id="formContato" novalidate>
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" class="input" type="text" placeholder="Seu nome" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" class="input" type="email" placeholder="voce@exemplo.com" required>
+        <label for="msg">Mensagem</label>
+        <textarea id="msg" name="mensagem" class="input" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Enviar mensagem</button>
+          <small id="feedback" aria-live="polite" class="feedback" hidden></small>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <small>Tributo visual • Projeto de estudo — Guilherme</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
